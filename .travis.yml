@@ -1,0 +1,13 @@
+language: python
+sudo: false
+matrix:
+  include:
+  - os: linux 
+    python: 3.6
+notifications:
+  email: false
+before_install:
+- pip install --user awscli
+script:
+- make zip
+- make deploy

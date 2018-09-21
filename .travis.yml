@@ -1,4 +1,4 @@
-language: python
+language: generic
 sudo: false
 matrix:
   include:
@@ -6,7 +6,7 @@ matrix:
     python: 3.6
 notifications:
   email: false
-before_install:
+install:
 - pip install --user awscli
 script:
 - make zip
